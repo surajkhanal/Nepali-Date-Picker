@@ -1,0 +1,86 @@
+/* @tailwind base; */
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  background-color: #d1d1d1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply flex items-center justify-center;
+}
+
+/* Utilities */
+.ndp-spacer {
+  @apply flex-1;
+}
+
+.ndp-btn {
+  @apply relative h-10 w-10 inline-flex items-center justify-center text-sm border-none rounded select-none overflow-visible align-middle bg-transparent;
+}
+
+.ndp-btn:not(:disabled) {
+  @apply cursor-pointer;
+}
+
+.ndp-btn:not(:disabled):hover {
+  @apply bg-gray-100;
+}
+
+/* Popup */
+.ndp-popup {
+  @apply max-w-full max-h-full;
+}
+.ndp-popup .ndp-content {
+  @apply shadow-lg bg-white dark:bg-gray-500;
+}
+
+.ndp-calendar-header {
+  @apply px-2 pt-2;
+}
+
+.ndp-calendar-controls {
+  @apply flex items-center my-2 ;
+}
+
+.ndp-calendar-period-btn {
+  @apply px-2 mx-2 w-auto h-9;
+}
+
+.ndp-calendar-arrow {
+  @apply inline-block align-middle pl-1 w-4 h-4;
+}
+
+.ndp-calendar-previous-btn,
+.ndp-calendar-next-btn {
+  @apply rounded-full;
+}
+
+.ndp-popup .ndp-calendar {
+  @apply w-72 h-96;
+}
+
+.ndp-calendar-content {
+  @apply px-2 pb-2;
+}
+
+.ndp-calendar-table {
+  @apply border-collapse border-spacing-0 w-full;
+}
+
+.ndp-calendar-table-header th {
+  @apply pb-2 text-center font-normal text-xs text-gray-500 relative;
+}
+.ndp-calendar-table-header-divider::after {
+  content: '';
+  @apply -mx-2 h-[1px] bg-gray-300 absolute top-0 inset-x-0;
+}
